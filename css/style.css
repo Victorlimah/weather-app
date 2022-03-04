@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: purple;
+}
+
+.container {
+  width: 25%;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.container h2 {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  padding: 10px 0 10px 0;
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+  color: purple;
+}
+
+.container button {
+  width: 75%;
+  padding: 8px;
+  margin: 20px auto 0 auto;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background-color: purple;
+  font-size: 14px;
+}
+
+.tela-de-busca {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container button:hover {
+  background-color: rgb(77, 2, 77);
+}
+
+.info-cidade {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto 0 auto;
+}
+
+.info-cidade input {
+  width: 82%;
+  margin-top: 20px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+input::placeholder {
+  text-align: center;
+  font-size: 14px;
+  color: purple;
+}
+
+.info-cidade button {
+  width: 35px;
+  border-radius: 12px;
+}
+
+.tela-carregando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tela-carregando h2 {
+  border: none;
+}
+
+.circulo-carregando {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  border: 8px solid purple;
+  border-left-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* PARTE DAS INFORMAÇÕES */
+
+.mostrando-info-clima {
+  width: 25%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+.icone-clima img {
+  width: 100px;
+}
+
+.cidade {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  padding: 10px 0 10px 0;
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+  color: purple;
+  font-weight: 600;
+}
+
+.informacoes-gerais {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+
+.temperatura-atual {
+  font-size: 32px;
+}
+
+.minimas-baixas {
+  display: flex;
+}
+
+.temperatura-minima {
+  color: blue;
+}
+
+.temperatura-maxima {
+  color: red;
+}
+.minimas-baixas h3 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.texto-detalhes {
+  font-size: 22px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
+.dados-detalhados {
+  font-size: 12px;
+  color: grey;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.clima {
+  margin-top: 15px;
+}
+
+.dados-sensacao,
+.dados-humidade,
+.dados-vento,
+.dados-visibilidade {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}

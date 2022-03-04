@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Weather App</title>
   </head>
-  <body></body>
+
+  <body>
+    <!-- SECTION PARA BUSCAR CIDADE-->
+    <div class="container">
+      <section class="tela-de-busca">
+        <h2>Weather App</h2>
+
+        <div class="info-cidade">
+          <input
+            class="nome-cidade"
+            type="text"
+            placeholder="Digite o nome da cidade aqui"
+          />
+          <button onclick="buscarCidade()">
+            <ion-icon name="search-sharp"></ion-icon>
+          </button>
+        </div>
+        <button onclick="pegarLocalizacao()">Usar minha localização</button>
+      </section>
+
+      <!-- SECTION CARREGANDO-->
+      <section class="tela-carregando hidden">
+        <h2>Carregando</h2>
+        <div class="circulo-carregando"></div>
+      </section>
+    </div>
+    <!-- SECTION CLIMA-->
+    <section class="mostrando-info-clima hidden">
+      <h3 class="cidade">Paris</h3>
+      <h4 class="clima">SUNNY</h4>
+      <div class="icone-clima">
+        <img class="imagem-icone-clima" src="" alt="Icone do clima" />
+      </div>
+      <div class="informacoes-gerais">
+        <div class="temperaturas">
+          <h2 class="temperatura-atual">20°</h2>
+          <div class="minimas-baixas">
+            <h3 class="temperatura-minima">17°</h3>
+            <h3 class="temperatura-maxima">20°</h3>
+          </div>
+        </div>
+        <div class="detalhes">
+          <h2 class="texto-detalhes">Detalhes</h2>
+          <div class="dados-detalhados">
+            <div class="dados-sensacao">
+              <span>Sens. térmica: </span>
+              <h3 class="sensacao-termica">19°</h3>
+            </div>
+
+            <div class="dados-humidade">
+              <span>Umidade: </span>
+              <h3 class="humidade">33%</h3>
+            </div>
+
+            <div class="dados-vento">
+              <span>Vento: </span>
+              <h3 class="vento">20.9 Km/h</h3>
+            </div>
+
+            <div class="dados-visibilidade">
+              <span>Visibilidade: </span>
+              <h3 class="visibilidade">10Km</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
