@@ -50,9 +50,9 @@ function pegarDetalhesClima(info) {
     const pais = info.data.sys.country;
     const clima = info.data.weather[0].main;
     const id = info.data.weather[0].id;
-    const temperatura = kelvinParaCelsius(info.data.main.temp);
-    const temperaturaMin = kelvinParaCelsius(info.data.main.temp_min);
-    const temperaturaMax = kelvinParaCelsius(info.data.main.temp_max);
+    const temperatura = info.data.main.temp;
+    const temperaturaMin = info.data.main.temp_min;
+    const temperaturaMax = info.data.main.temp_max;
     const sensacaoTermica = info.data.main.feels_like;
     const umidade = info.data.main.humidity;
     const pressao = info.data.main.pressure;
@@ -124,13 +124,13 @@ function renderizaInfos(
   const climaTela = (document.querySelector(".clima").innerText = ` ${clima}`);
   const tempAtualTela = (document.querySelector(
     ".temperatura-atual"
-  ).innerText = `${temperatura}`);
+  ).innerText = `${temperatura}°C`);
   const tempMinTela = (document.querySelector(
     ".temperatura-minima"
-  ).innerText = `${temperaturaMin}`);
+  ).innerText = `${temperaturaMin}°C`);
   const tempMaxTela = (document.querySelector(
     ".temperatura-maxima"
-  ).innerText = `${temperaturaMax}`);
+  ).innerText = `${temperaturaMax}°C`);
   const sensTerm = (document.querySelector(
     ".sensacao-termica"
   ).innerText = `${sensacaoTermica}`);
@@ -144,7 +144,10 @@ function renderizaInfos(
 }
 
 function kelvinParaCelsius(kelvin) {
-  let celsius = kelvin - 273;
+  console.log(`esse é kelvin: ${kelvin}`);
+  let celsius = parseInt(kelvin) - 273;
+
+  console.log(celsius);
   return celsius;
 }
 

@@ -151,10 +151,12 @@ input::placeholder {
 
 .temperatura-minima {
   color: blue;
+  margin-left: 5px;
 }
 
 .temperatura-maxima {
   color: red;
+  margin-left: 5px;
 }
 .minimas-baixas h3 {
   font-size: 14px;
